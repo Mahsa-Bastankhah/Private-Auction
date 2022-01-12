@@ -172,8 +172,11 @@ contract Auction {
         }
         state = AuctionState.WinnerAnnonced;
         
-    }
+    } 
+    
     */
+    
+     /////////////////////////////////////////////////////////////////// annonuncing the winner
     // verifying the zkp proof
     function VerifyWinner( uint[2] memory a,
         uint[2][2]memory b,
@@ -281,7 +284,7 @@ contract Auction {
 		}
         
     }
-    // debuging purpose
+    // debugging purpose
     function printfunc(uint index)public view returns(address , uint , uint , uint, bool , bool, uint , uint , bool , uint , uint ){
         Bidder memory bidder = bidders[indexs[index]];
         return (indexs[index]  ,
