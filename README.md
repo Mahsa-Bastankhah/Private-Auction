@@ -18,7 +18,7 @@ The auctioneer opens the bids and determines and announces the winner; In additi
 ### Forth phase (withdrawal):
 At the end of the auction, all the honest participant except for the winner can withdraw their deposit. The winner’s deposit is not refunded and she must fulfil the payment based on her bid.
 ### Features
-It can be inferred from the protocol that the suggested auction provides the following properties:
+Our proposed scheme guarantees the following security and privacy properties:
 1. Bids’ Privacy: The submitted bids are visible to nobody during the commitment phase.
 2. Posterior privacy: After the revealing phase, bids are not revealed to the public, assuming a semi-honest auctioneer.
 3. Bids’ Binding: Bidders cannot deny or change their bids once they have committed.
@@ -27,7 +27,7 @@ It can be inferred from the protocol that the suggested auction provides the fol
 6. Non-Interactivity: Since we are using succinct non-interactive Argument of Knowledge protocol bidders and auctioneer don't need to interact with smart contract in order to show the validity of their proofs.
 7. Scalability: As we use ZK-snark, proofs are succinct; also verifying the proofs doesn't consume unusual gas, so this auction is scalable across the number of bidders.
 
-At following figure, you see the scheme of participation in a sealed bid auction from the point of view of bidder:
+A high level picture of our scheme is provided in the following figure:
 
 
 <img src="https://i.ibb.co/tXKKvKQ/d.png" alt="d" border="0">
