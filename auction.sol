@@ -22,7 +22,7 @@ contract Auction {
         uint[2] pubKey;
 		uint deposit;
     }
-	
+    // if one bidder deviated from the protocol he is punished
     event GuiltyBidder(string privateKey , address addr);
     AuctionState public state;
     bool withdrawLock;
@@ -107,7 +107,7 @@ contract Auction {
         guiltyNumber = 0;
     }
     /////////////////////////////////////////////////////////////////// biding
-    
+    // first phase
     function Bid(uint[2]memory commit , uint[2]memory pubKey) inBidInterval fainnessFeePaid public payable {
         require(indexs.length < maxBiddersCount ); //available slot    
         require(bidders[msg.sender].existing == false );
@@ -120,7 +120,7 @@ contract Auction {
             bidders[msg.sender].commit = commit;
             bidders[msg.sender].pubKey = pubKey;
     }
-    
+    \\ second phase
     function Reveal(uint  cipher , uint[2]memory a , uint[2][2]memory b , uint[2]memory c , uint[8]memory input) inRevealInterval public {
         require(bidders[msg.sender].existing); //existing bidder
         require(bidders[msg.sender].revealed == false); // hasn't revealed before
@@ -136,7 +136,8 @@ contract Auction {
         // if her proof was wrong she would be recignized as one who hasn't revealed in the next phase becausethe cipher that has been saved for her is 0 by default in Bid()function
     }
     
-    /////////////////////////////////////////////////////////////////// voting
+
+    // if one of the bidders hasn't revelaed, she should be removed from the auction
 	function checkIfAllBiddersRevealed() inVerifyInterval public{
 		require(state !=  AuctionState.AllBiddersRevealed );//  this function just be called once
 		for (uint i = 0; i < indexs.length ; i++) {
@@ -152,6 +153,7 @@ contract Auction {
 	}
   
 	/*
+    // the auctioneer announces the winner and proves that it is the maximum bid 	
     function AnnounceWinner( bytes32 _random , bytes32 _highestBid , address _winner)
     inVerifyInterval onlyAuctioneer thisStatePassed(AuctionState.AllBiddersRevealed) public{
 		require(!bidders[_winner].paidBack);// winner shouldn't be guilty >> we dont need it because if the winner is guilty her commitment is zero and max cant be zero
