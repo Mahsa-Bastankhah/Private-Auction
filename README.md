@@ -27,9 +27,8 @@ It can be inferred from the protocol that the suggested auction provides the fol
 7. Scalability: As we use ZK-snark, proofs are succinct; also verifying the proofs doesn't consume unusual gas, so this auction is scalable across the number of bidders.
 
 At following figure, you see the scheme of participation in a sealed bid auction from the point of view of bidder:
-![alt text]("https://ibb.co/pywwMwb")
-
-<img src="https://ibb.co/pywwMwb" />
+![alt text]("https://i.ibb.co/tXKKvKQ/d.png")
+<img src="https://i.ibb.co/tXKKvKQ/d.png" alt="d" border="0">
  
 ## References:
 
