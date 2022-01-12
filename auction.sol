@@ -124,7 +124,7 @@ contract Auction {
         require(bidders[msg.sender].existing); //existing bidder
         require(bidders[msg.sender].revealed == false); // hasn't revealed before
         bidders[msg.sender].revealed = true;// she can't reveal again
-        verifierCipher = VerifierCipher(0x89f3b997061682B5db303f0A3407915edc5f56fC);// this address must be copied from etherscan search
+        verifierCipher = VerifierCipher(0x89f3b997061682B5db303f0A3407915edc5f56fC);// not necessary anymore. this line can be removed
         require(input[0] == auctioneerPublicKey[0] && input[1] == auctioneerPublicKey[1]);//publick inputs of zkp are consistenet with data stored in smart contract
         require(input[2] == bidders[msg.sender].pubKey[0] && input[3] == bidders[msg.sender].pubKey[1]);//check if publick inputs of zkp are consistenet with data stored in smart contract
         require(input[4] == bidders[msg.sender].commit[0] && input[5] == bidders[msg.sender].commit[1]);//check if publick inputs of zkp are consistenet with data stored in smart contract
