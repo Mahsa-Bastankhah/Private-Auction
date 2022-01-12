@@ -1,3 +1,4 @@
+<div style="text-align: left"> 
 # Private-Auction
 ## Introduction
 Conventional trading systems necessitate individuals to trust each other or a third party. The most important benefit of Blockchain is eliminating the need for a trusted party. For this reason, trading Dapps have been of great popularity in the past few years. One of the most important applications in financial interactions is an auction. An auction is a way of selling commodities, products, or properties in which the initial price is determined by the seller. Then bidders offer their price for buying the product. The product will be sold to the bidder correspondent with the highest bid. Regarding the privacy of the bids, auctions are categorized as open auctions and sealed-bid auctions.
@@ -27,7 +28,8 @@ It can be inferred from the protocol that the suggested auction provides the fol
 7. Scalability: As we use ZK-snark, proofs are succinct; also verifying the proofs doesn't consume unusual gas, so this auction is scalable across the number of bidders.
 
 At following figure, you see the scheme of participation in a sealed bid auction from the point of view of bidder:
-![alt text]("https://i.ibb.co/tXKKvKQ/d.png")
+
+
 <img src="https://i.ibb.co/tXKKvKQ/d.png" alt="d" border="0">
  
 ## References:
@@ -35,4 +37,5 @@ At following figure, you see the scheme of participation in a sealed bid auction
 [Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts](https://user.eng.umd.edu/~cpap/published/hawk.pdf)
 
 [Sealed-Bid Auction on the Ethereum Blockchain](https://user.eng.umd.edu/~cpap/published/hawk.pdf)
+ </div>
 
