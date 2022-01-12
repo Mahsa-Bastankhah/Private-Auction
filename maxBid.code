@@ -1,4 +1,6 @@
 import "hashes/sha256/512bitPacked.code" as sha256packed
+// this code is run by the auctioneer
+
 def main(field maxBid , field winnerRandom , field[2]winnerCommit , field[4]hashes, private field[2] bids , private field[2] randoms ) -> (field):
 	field[3] comparision = [0 , 0 , 0]
 	hash = sha256packed([0 , 0 , winnerRandom , maxBid)
