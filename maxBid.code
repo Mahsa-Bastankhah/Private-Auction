@@ -1,3 +1,4 @@
+//@author Mahsa Bastankhah
 import "hashes/sha256/512bitPacked.code" as sha256packed
 // this code is run by the auctioneer
 
