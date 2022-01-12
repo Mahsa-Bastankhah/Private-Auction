@@ -295,8 +295,5 @@ contract Auction {
 
   
 
-   // auctioneer must notice that bid of guilty bidders is zero
-   // deposit of guilty people should be given to others
-   // robust to re-call attack!!
 
 }
