@@ -30,7 +30,7 @@ Our proposed scheme guarantees the following security and privacy properties:
 A high level picture of our scheme is provided in the following figure:
 
 
-<img src="https://i.ibb.co/tXKKvKQ/d.png" alt="d" border="0">
+<img src="https://i.ibb.co/PGXCgqR/Picture1.png" alt="Picture1" border="0"></a>
  
 ## References:
 
