@@ -27,9 +27,12 @@ It can be inferred from the protocol that the suggested auction provides the fol
 7. Scalability: As we use ZK-snark, proofs are succinct; also verifying the proofs doesn't consume unusual gas, so this auction is scalable across the number of bidders.
 
 At following figure, you see the scheme of participation in a sealed bid auction from the point of view of bidder:
-![alt text](https://ibb.co/pywwMwb)
+![alt text]("https://ibb.co/pywwMwb")
+
+<img src="https://ibb.co/pywwMwb" />
  
-##References:
+## References:
+
 [Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts](https://user.eng.umd.edu/~cpap/published/hawk.pdf)
 
 [Sealed-Bid Auction on the Ethereum Blockchain](https://user.eng.umd.edu/~cpap/published/hawk.pdf)
