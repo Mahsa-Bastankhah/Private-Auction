@@ -1,0 +1,15 @@
+import "hashes/sha256/512bitPacked.code" as sha256packed
+def main(field maxBid , field winnerRandom , field[2]winnerCommit , field[4]hashes, private field[2] bids , private field[2] randoms ) -> (field):
+	field[3] comparision = [0 , 0 , 0]
+	hash = sha256packed([0 , 0 , winnerRandom , maxBid)
+	hash[0] == winnerCommit[0]
+	hash[1] == winnerCommit[1]// it must be checked that maximum is compatable with a commitment
+	for field i in 0..2 do
+		hash = sha256packed([0 , 0 , randoms[i] , bids[i]])
+		comparision[i] = if bids[i] < maxBid then 1 else 0 fi
+		comparision[i] == 1
+		hash[0] == hashes[i * 2]
+		hash[1] == hashes[i * 2 + 1]		
+	endfor
+	return 1
+	
