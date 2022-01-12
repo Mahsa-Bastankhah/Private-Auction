@@ -1,0 +1,19 @@
+
+import "hashes/sha256/1024bitPadded.code" as sha256
+import "hashes/sha256/512bitPacked.code" as sha256packed
+import "ecc/edwardsScalarMult.code" as scalarMult 
+import "ecc/babyjubjubParams.code" as context
+import "ecc/edwardsAdd.code" as add
+def main(private field[256] bidderPrivateKey ,private field bid ,private field random , field[2] managerPubKey , field[2] bidderPubKey ,  field[2] commitment , field cipher ) -> (field):
+	context = context()
+	hash = sha256packed([0 , 0 , random , bid])
+	hash[0] == commitment[0]
+	hash[1] == commitment[1]
+	field[2] key = scalarMult(bidderPrivateKey , managerPubKey , context)
+	cipher == bid + random * (2**10) + key[1] // bid is at max 10 bit so concatenate of bid and random would be bid + random * 2^10
+	field[2] G = [context[4], context[5]]
+	field[2] tmp = scalarMult(bidderPrivateKey , G , context)
+	tmp == bidderPubKey
+return 1
+
+	
