@@ -174,7 +174,7 @@ contract Auction {
         
     }
     */
-    
+    // verifying the zkp proof
     function VerifyWinner( uint[2] memory a,
         uint[2][2]memory b,
         uint[2]memory c,
@@ -217,7 +217,7 @@ contract Auction {
     uint extraDeposit; // blockedDeposit / guilty Number that should be given to honest bidders
     bool extraDepositCalculated;
     event WinnerPaid(string s);
-    
+    // withdraw the deposit by the bidders
     function Withdraw() inCheckoutInterval public {
         if(!extraDepositCalculated){// if extra deposit hasn't calculated before we must calculate it once
             if(state == AuctionState.Verified || state == AuctionState.cheaterAuctioneer){
@@ -248,7 +248,7 @@ contract Auction {
 			withdrawLock = false;
 		}
     }
-	
+    // winner fulfil his payment with the auctioneer
     function WinnerPay() inCheckoutInterval public payable {
         require(msg.sender == winner && bidders[msg.sender].existing);
         require(bidders[msg.sender].paidBack == false);
@@ -281,7 +281,7 @@ contract Auction {
 		}
         
     }
-    
+    // debuging purpose
     function printfunc(uint index)public view returns(address , uint , uint , uint, bool , bool, uint , uint , bool , uint , uint ){
         Bidder memory bidder = bidders[indexs[index]];
         return (indexs[index]  ,
