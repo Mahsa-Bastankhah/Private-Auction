@@ -9,9 +9,9 @@ In this auction, the privacy of the bids is not important. All the bidders annou
 #### Sealed-bid auction: 
 In sealed-bid auctions, the bids are private data that should remain unknown to the other bidders even after the auction finishes. Therefore, the bidders send their bids to the auctioneer in sealed envelopes. Then the auctioneer opens all of them simultaneously and determines and announces the winner.
 
-In conventional auctions, the bidders have to trust the auctioneer for announcing the maximum bid. There isn't any way to eliminate the trust of the auctioneer and at the same time preserve the privacy of bids.
+In conventional auctions, the bidders have to trust the auctioneer for announcing the maximum bid. There isn't any way to eliminate the trust of the auctioneer and at the same time preserve the privacy of the bids.
 ## Motivation and challenges
-Our objective is to develop a sealed-bid auction Dapp on the Ethereum blockchain. This Dapp should work without trust to the auctioneer or any other third party in determining the winner and at the same time, guarantee the privacy of the bids against all the other bidders or any observer. Implementing sealed-bid auctions on blockchains seems challenging because the privacy of bids has a conflict with the inherent transparency of the Blockchain. tackling this challenge is the main contribution of our work.
+Our objective is to develop a sealed-bid auction Dapp on the Ethereum blockchain. This Dapp should work without trust to the auctioneer or any other third party in determining the winner and at the same time, guarantee the privacy of the bids against all the other bidders or any observer. Implementing sealed-bid auctions on blockchains seems challenging because the privacy of bids has conflict with the inherent transparency of the Blockchain. tackling this challenge is the main contribution of our work.
 ## Structure of our Dapp 
 The core of our smart contract is consist of several phases that are described below.
 ### First phase (commitment):
