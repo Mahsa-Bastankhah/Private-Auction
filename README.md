@@ -17,7 +17,7 @@ The core of our smart contract is consist of several phases that are described b
 ### First phase (commitment):
 In this phase, bidders encrypt their bid with the auctioneer's public key and commit their encrypted bid to the smart contract. Once the commitment phase has finished no one can commit a new bid. In this phase, all bidders and auctioneer have to deposit some money as a guarantee to follow the protocol honestly. 
 ### Second phase (revealing):
-In this phase, bidders encrypt their bid with the auctioneer's public key send the encrypted bid to the smart contract. In another word, they send the opening values corresponding to the committed bid in the previous phase.
+In this phase, bidders encrypt their bid with the auctioneer's public key and send the encrypted bid to the smart contract. In another word, they send the opening values corresponding to the committed bid in the previous phase.
 ### Third phase (announcement and verification of the winner):
 The auctioneer opens the bids and determines and announces the winner; In addition, he must provide a ZK-snark proof to show that the winner has been determined correctly. Note that as we use ZK-snark, no information about any bids except for winner's bid leaks. Smart contract verifies auctioneer's proof, in case of wrong proof or not providing any proof, auctioneer's deposit is burnt and the auction ends. For implementing this phase we have used the Zokrate library which is a ZK-SNARK package implemented for Ethereum blockchain. 
 ### Forth phase (withdrawal):
