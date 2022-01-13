@@ -31,6 +31,6 @@ Our proposed scheme has the following security and privacy guarantees:
 
 [Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts](https://user.eng.umd.edu/~cpap/published/hawk.pdf)
 
-[Sealed-Bid Auction on the Ethereum Blockchain](https://user.eng.umd.edu/~cpap/published/hawk.pdf)
+[Sealed-Bid Auction on the Ethereum Blockchain](https://eprint.iacr.org/2018/704.pdf)
 
 
