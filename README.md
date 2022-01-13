@@ -2,8 +2,12 @@
 # Private-Auction
 ## Introduction
 An auction is a way of selling commodities, products, or properties in which the initial price is determined by the seller. Then bidders offer their price for buying the product. The product will be sold to the bidder correspondent with the highest bid. Regarding the privacy of the bids, auctions are categorized as open auctions and sealed-bid auctions.
+
 Open auctions: In this auction, the privacy of the bids is not important. All the bidders announce their bid publicly and the winner is determined based on the auction rules.
-Sealed-bid auction: In sealed-bid auctions, the bids are private data that should remain unknown to the other bidders even after the auction finishes. Therefore, the bidders hand out their bids to the auctioneer in sealed envelopes. Then the auctioneer opens all of them simultaneously and determines and announces the winner.
+
+Sealed-bid auction: In sealed-bid auctions, the bids are private data that should remain unknown to the other bidders even after the auction finishes. Therefore, the bidders 
+
+hand out their bids to the auctioneer in sealed envelopes. Then the auctioneer opens all of them simultaneously and determines and announces the winner.
 In conventional auctions, the bidders have to trust the auctioneer for announcing the maximum bid. There isn't any way to eliminate the trust of the auctioneer and at the same time preserve the privacy of bids.
 ## Motivation and challenges
 Our objective is to develop a sealed-bid auction Dapp on the Ethereum blockchain. This Dapp should work without trust to the auctioneer or any other third party in determining the winner and at the same time, guarantee the privacy of the bids against all the other bidders or any observer. Implementing sealed-bid auctions on blockchains seems challenging because the privacy of bids has a conflict with the inherent transparency of the Blockchain. tackling this challenge is the main contribution of our work.
